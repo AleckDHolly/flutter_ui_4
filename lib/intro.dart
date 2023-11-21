@@ -9,7 +9,7 @@ class Intro extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
-          colors: [Colors.lime, Colors.black],
+          colors: [Colors.red, Colors.black],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -37,8 +37,10 @@ class Intro extends StatelessWidget {
                       const Flexible(
                         flex: 1,
                         child: Text(
-                          "👋",
-                          style: TextStyle(fontSize: 60),
+                          "🌺",
+                          style: TextStyle(
+                            fontSize: 60,
+                          ),
                         ),
                       ),
                       RichText(
@@ -48,7 +50,7 @@ class Intro extends StatelessWidget {
                             TextSpan(text: "All your"),
                             TextSpan(
                                 text: " meditations",
-                                style: TextStyle(color: Colors.limeAccent)),
+                                style: TextStyle(color: Colors.red)),
                             TextSpan(text: " in one app!"),
                           ],
                         ),
@@ -91,7 +93,7 @@ class Intro extends StatelessWidget {
                             height: 60,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.lime,
+                                backgroundColor: Colors.red,
                               ),
                               onPressed: () {
                                 Navigator.of(context).push(

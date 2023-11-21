@@ -11,7 +11,7 @@ class TopTitles extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
           child: Text(
-            '👋 Courses'.toUpperCase(),
+            '🌺 Courses'.toUpperCase(),
           ),
         ),
         const Padding(

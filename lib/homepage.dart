@@ -10,12 +10,12 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async => false,
+    return PopScope(
+      canPop: false,
       child: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color.fromARGB(255, 197, 218, 9), Colors.black],
+            colors: [Colors.red, Colors.black],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
                     tileColor: Colors.grey,
                     textColor: Colors.white,
                     playColor: Colors.black,
-                    btnColor: Colors.limeAccent,
+                    btnColor: Colors.red,
                   ),
                   ToDos(
                     title: "Meditaion to deep sleep",

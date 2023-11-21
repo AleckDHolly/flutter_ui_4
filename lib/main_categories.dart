@@ -22,7 +22,7 @@ class MainCategory extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
                 Colors.blueGrey.withOpacity(0.5),
-                Color.fromARGB(51, 0, 0, 0),
+                const Color.fromARGB(51, 0, 0, 0),
                 Colors.blueGrey.withOpacity(0.5),
               ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
               borderRadius: BorderRadius.circular(20),
@@ -35,17 +35,17 @@ class MainCategory extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Text(
+                      const Text(
                         "Plan for \nthe day",
                         style: TextStyle(fontSize: 20),
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.limeAccent,
+                          color: Colors.redAccent,
                           borderRadius: BorderRadius.circular(50),
                         ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Icon(
                             Icons.favorite_border_outlined,
                           ),
@@ -60,13 +60,15 @@ class MainCategory extends StatelessWidget {
                         child: ListTile(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30)),
-                          leading: Icon(Icons.check_box),
+                          leading: category == plans.first
+                              ? Icon(Icons.check_box)
+                              : Icon(Icons.check_box_outline_blank),
                           title: Text(
                             category,
-                            style: TextStyle(fontSize: 11),
+                            style: const TextStyle(fontSize: 11),
                           ),
                           tileColor: category == plans.first
-                              ? Colors.lightGreenAccent
+                              ? Colors.red
                               : Colors.grey,
                         ),
                       );
@@ -85,13 +87,13 @@ class MainCategory extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
                 Colors.blueGrey.withOpacity(0.5),
-                Color.fromARGB(51, 0, 0, 0),
+                const Color.fromARGB(51, 0, 0, 0),
                 Colors.blueGrey.withOpacity(0.5),
               ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(20),
+            child: const Padding(
+              padding: EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
